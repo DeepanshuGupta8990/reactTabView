@@ -1,8 +1,6 @@
 
 
-
-
-https://github.com/DeepanshuGupta8990/reactTabView/assets/138364688/943daa79-b77e-41a9-937d-ba2a3fac2692
+![ezgif com-optimize](https://github.com/DeepanshuGupta8990/reactTabView/assets/138364688/351261d1-9ed1-4b91-b226-4effbcb6ec8e)
 
 
 
