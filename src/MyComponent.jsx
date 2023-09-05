@@ -9,7 +9,7 @@ const styles = {
     color: '#fff',
   },
   slide1: {
-    background: 'red',
+    background: 'pink',
   },
   slide2: {
     background: '#B3DC4A',
@@ -23,21 +23,28 @@ const MyComponent = () => {
   const [activeIndex, setActiveIndex] = useState(0); // Initialize with the first tab
 
   const handleChangeIndex = (index) => {
+    console.log(232323123)
     setActiveIndex(index);
   };
 
   // Function to programmatically go to the second tab
-  const goToSecondTab = () => {
-    setActiveIndex(1);
+  const goToSecondTab = (no) => {
+    setActiveIndex(no);
   };
 
   return (
+    <>
+    <nav style={{display:"flex",justifyContent:"space-between",alignItems:'center',flexDirection:"row",padding:" 0px 20px",background:'grey'}}>
+        <p style={{cursor:"pointer",color:activeIndex===0?'white':'black'}} onClick={()=>{goToSecondTab(0)}}>Tab1</p>
+        <p style={{cursor:"pointer",color:activeIndex===1?'white':'black'}} onClick={()=>{goToSecondTab(1)}}>Tab2</p>
+        <p style={{cursor:"pointer",color:activeIndex===2?'white':'black'}} onClick={()=>{goToSecondTab(2)}}>Tab3</p>
+    </nav>
     <div>
-      <button onClick={goToSecondTab}>Go to Second Tab</button>
+      {/* <button onClick={goToSecondTab}>Go to Second Tab</button> */}
       <SwipeableViews
         index={activeIndex}
         onChangeIndex={handleChangeIndex}
-      >
+        >
         <div style={Object.assign({}, styles.slide, styles.slide1)}>
           <Component />
         </div>
@@ -49,6 +56,7 @@ const MyComponent = () => {
         </div>
       </SwipeableViews>
     </div>
+</>
   );
 };
 
